@@ -1,0 +1,11 @@
+  <div class="container">
+    <h1>Gerador de Senhas Aleatórias</h1>
+    <form action="/generate" method="POST">
+      <label for="length">Comprimento da Senha:</label>
+      <input type="number" id="length" name="length" min="1" value="8" class="input-length">
+      <button type="submit" class="btn-generate">Gerar Senha</button>
+    </form>
+    {{#if password}}
+      <p class="password-info">Sua senha aleatória é: <span id="password" class="generated-password">{{password}}</span></p>
+    {{/if}}
+  </div>
